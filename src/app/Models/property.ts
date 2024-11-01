@@ -1,3 +1,4 @@
+import { CommercialUse } from "./commercialUse";
 import { ParkingType } from "./parkingType";
 import { PropertyType } from "./propertyType";
 
@@ -14,13 +15,13 @@ export interface Property{
   totalFloors?: number,
   specialFeatures?:string,
   availibility: Date,
-  propertyAge: number,
+  propertyAge?: number,
   isGate?: boolean,
   mainEntrance?: string,
   totalPropertyArea: number,
   builtArea?: number,
   carpetArea?: number,
   carParking?: ParkingType,
-  commercialUse?: string
+  commercialUse?: CommercialUse
   comments?: string
 }

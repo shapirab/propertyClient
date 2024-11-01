@@ -1,0 +1,59 @@
+
+
+.nav{
+  display: flex;
+  width: 100%;
+  background-color: var(--background-color);
+  padding: 0.5rem 1rem;
+}
+
+ul{
+  margin: 0;
+}
+
+a{
+  color:var(--regular-color);
+}
+
+button{
+  color: var(--regular-color);
+}
+
+.nav--logo{
+  color: var(--selected-color);
+  display: flex;
+  align-items: center;
+}
+
+.fas{
+  background-color: var(--selected-color);
+  color: var(--background-color);
+  font-size: 1.5rem;
+}
+
+.logo__title{
+  margin-left: 5px;
+}
+
+.nav--login{
+  margin-left: auto;
+}
+
+.btn--link{
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  margin-left: 1.5rem;
+}
+
+.nav--list ul{
+  display: flex;
+}
+
+.nav--list li{
+  margin-left: 1.5rem;
+}
+
+.selected{
+  color: var(--selected-color);
+}
