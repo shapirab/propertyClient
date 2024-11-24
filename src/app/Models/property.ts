@@ -5,8 +5,9 @@ import { PropertyType } from "./propertyType";
 export interface Property{
   id: string,
   type: PropertyType,
+  profileImage: string | ArrayBuffer | null | undefined,
   numberOfBedrooms: number,
-  furnishing: boolean,
+  furnishing: Furnishing,
   address:{
     city: string,
     state: string
@@ -22,6 +23,12 @@ export interface Property{
   builtArea?: number,
   carpetArea?: number,
   carParking?: ParkingType,
-  commercialUse?: CommercialUse
-  comments?: string
+  commercialUse: CommercialUse
+  comments?: string,
+}
+
+export enum Furnishing{
+  "Not Furnished",
+  "Semi Furnished",
+  "Fully Furnished"
 }

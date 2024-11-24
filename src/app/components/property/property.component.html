@@ -1,0 +1,14 @@
+<div class="property-container">
+  <img class="property--profile-image" [src]="url" alt="">
+  <h2 class="property--header">{{property?.numberOfBedrooms}} BHK {{property?.type}} </h2>
+  <div class="property--details">
+    <p class="property--address">in {{property?.address?.city}}, {{property?.address?.state}}</p>
+    <p class="property--features">{{getFurnishingText(property?.furnishing)}} | {{getAvailabilityText(property?.availibility)}}</p>
+  </div>
+  <div class="barrier"></div>
+  <div class="property--financial">
+    <p class="financial__body">Price: <span>{{property?.commercialUse?.price}} USD</span></p>
+    <p class="financial__body">|</p>
+    <p class="financial__body">Area: <span>{{property?.totalPropertyArea}} sq ft</span></p>
+  </div>
+</div>

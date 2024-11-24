@@ -1,0 +1,50 @@
+.property-container{
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 5px 15px 10px 2px #ccc;
+  overflow: hidden;
+}
+
+.property--profile-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property--header{
+  font-size: 3rem;
+  color: rgb(25, 125, 192);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.property--details{
+  margin-bottom: 1rem;
+}
+
+.property--features{
+  font-weight: 700;
+}
+
+.property--financial{
+  margin-top: 0.3rem;
+  display: flex;
+}
+
+.financial__body{
+  margin-right: 1rem;
+}
+
+.financial__body span{
+  color: rgb(255, 0, 0);
+}
+
+p{
+  margin: 0;
+}
+
+.barrier{
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+}

@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { RentComponent } from './components/rent/rent.component';
 import { ListPropertyComponent } from './components/list-property/list-property.component';
+import { PropertyComponent } from './components/property/property.component';
+import { PropertiesComponent } from './components/properties/properties.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ListPropertyComponent } from './components/list-property/list-property.
     NavbarComponent,
     BuyComponent,
     RentComponent,
-    ListPropertyComponent
+    ListPropertyComponent,
+    PropertyComponent,
+    PropertiesComponent
   ],
   imports: [
     BrowserModule,
