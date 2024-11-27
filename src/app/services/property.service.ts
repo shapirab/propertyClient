@@ -17,6 +17,14 @@ export class PropertyService {
     return this.properties;
   }
 
+  getRentalProperties(){
+    return this.properties.filter(property => property.commercialUse.commercialType === CommercialType.Rent);
+  }
+
+  getSaleProperties(){
+    return this.properties.filter(property => property.commercialUse.commercialType === CommercialType.Sell);
+  }
+
   populateProperties(){
     this.properties = [
       {

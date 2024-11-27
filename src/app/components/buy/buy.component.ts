@@ -12,7 +12,7 @@ export class BuyComponent implements OnInit {
   constructor(private propertyService: PropertyService) { }
 
   ngOnInit(): void {
-    this.properties = this.propertyService.getAllProperties();
+    this.properties = this.propertyService.getSaleProperties();
   }
 
 }
