@@ -3,7 +3,7 @@ import { ParkingType } from "./parkingType";
 import { PropertyType } from "./propertyType";
 
 export interface Property{
-  id: string,
+  id: number,
   type: PropertyType,
   profileImage: string | ArrayBuffer | null | undefined,
   numberOfBedrooms: number,

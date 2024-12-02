@@ -25,10 +25,14 @@ export class PropertyService {
     return this.properties.filter(property => property.commercialUse.commercialType === CommercialType.Sell);
   }
 
+  getPropertyById(id: number): Property | undefined{
+    return this.properties.find(property => property.id === id);
+  }
+
   populateProperties(){
     this.properties = [
       {
-        id: '1',
+        id: 1,
         type: PropertyType.House,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
@@ -47,7 +51,7 @@ export class PropertyService {
         }
       },
       {
-        id: '2',
+        id: 2,
         type: PropertyType.House,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 2,
@@ -66,7 +70,7 @@ export class PropertyService {
         }
       },
       {
-        id: '3',
+        id: 3,
         type: PropertyType.Apartment,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
@@ -85,7 +89,7 @@ export class PropertyService {
         }
       },
       {
-        id: '4',
+        id: 4,
         type: PropertyType.Apartment,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
@@ -104,7 +108,7 @@ export class PropertyService {
         }
       },
       {
-        id: '5',
+        id: 5,
         type: PropertyType.Apartment,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,

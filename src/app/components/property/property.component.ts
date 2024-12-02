@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Furnishing, Property } from 'src/app/Models/property';
 
 @Component({
@@ -9,7 +10,7 @@ import { Furnishing, Property } from 'src/app/Models/property';
 export class PropertyComponent implements OnInit {
   @Input() property: Property | undefined;
   url:string | ArrayBuffer | null | undefined;
-  constructor() {
+  constructor(private route:Router) {
     this.url = '../../assets/images/house_default.png'
   }
 
@@ -45,5 +46,11 @@ export class PropertyComponent implements OnInit {
     let newDate = new Date(date);
     newDate.setHours(0, 0, 0, 0);
     return newDate;
+  }
+
+  navigateToDetailPage(id:number | undefined){
+    if(id != undefined){
+      this.route.navigate(['/property', id]);
+    }
   }
 }

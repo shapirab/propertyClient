@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RentComponent } from './components/rent/rent.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { ListPropertyComponent } from './components/list-property/list-property.component';
+import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
 
 const routes: Routes = [
   {path: 'home',
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: 'list-property', component: ListPropertyComponent }
     ]
   },
+  { path: 'property/:id', component: PropertyDetailComponent },
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

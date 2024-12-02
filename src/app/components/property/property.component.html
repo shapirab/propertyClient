@@ -1,4 +1,4 @@
-<div class="property-container">
+<div class="property-container" (click)="navigateToDetailPage(property?.id)">
   <img class="property--profile-image" [src]="url" alt="">
   <h2 class="property--header">{{property?.numberOfBedrooms}} BHK {{property?.type}} </h2>
   <div class="property--details">

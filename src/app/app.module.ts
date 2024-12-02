@@ -10,6 +10,7 @@ import { RentComponent } from './components/rent/rent.component';
 import { ListPropertyComponent } from './components/list-property/list-property.component';
 import { PropertyComponent } from './components/property/property.component';
 import { PropertiesComponent } from './components/properties/properties.component';
+import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PropertiesComponent } from './components/properties/properties.componen
     RentComponent,
     ListPropertyComponent,
     PropertyComponent,
-    PropertiesComponent
+    PropertiesComponent,
+    PropertyDetailComponent
   ],
   imports: [
     BrowserModule,
