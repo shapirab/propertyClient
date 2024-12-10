@@ -11,7 +11,13 @@ export class PropertyComponent implements OnInit {
   @Input() property: Property | undefined;
   url:string | ArrayBuffer | null | undefined;
   constructor(private route:Router) {
-    this.url = '../../assets/images/house_default.png'
+    //this.url = '../../assets/images/house_default.png'
+    if(this.property?.profileImage != null){
+      this.url = this.property?.profileImage;
+    }
+    else{
+      this.url = '../../assets/images/house_default.png';
+    }
   }
 
   ngOnInit(): void {

@@ -21,3 +21,20 @@ li a{
 .l-grid--col-3{
   grid-template-columns: repeat(3, 1fr);
 }
+
+.property--header{
+  font-size: 3rem;
+  color: rgb(25, 125, 192);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.property--features{
+  font-weight: 700;
+}
+
+.barrier{
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+}

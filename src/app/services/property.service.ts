@@ -33,6 +33,7 @@ export class PropertyService {
     this.properties = [
       {
         id: 1,
+        title: 'Marco Home',
         type: PropertyType.House,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
@@ -48,10 +49,13 @@ export class PropertyService {
           commercialType: CommercialType.Sell,
           price: 100_000,
           securityDeposit: 0
-        }
+        },
+        builtArea: 1200,
+        carpetArea: 900
       },
       {
         id: 2,
+        title: 'A Beautiful House',
         type: PropertyType.House,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 2,
@@ -71,6 +75,7 @@ export class PropertyService {
       },
       {
         id: 3,
+        title: 'Moshico Home',
         type: PropertyType.Apartment,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
@@ -90,6 +95,7 @@ export class PropertyService {
       },
       {
         id: 4,
+        title: 'Some Property',
         type: PropertyType.Apartment,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
@@ -109,6 +115,7 @@ export class PropertyService {
       },
       {
         id: 5,
+        title: 'Dream World Palace',
         type: PropertyType.Apartment,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,

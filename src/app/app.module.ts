@@ -11,6 +11,7 @@ import { ListPropertyComponent } from './components/list-property/list-property.
 import { PropertyComponent } from './components/property/property.component';
 import { PropertiesComponent } from './components/properties/properties.component';
 import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
+import { PropertyInfoTabsComponent } from './components/property-info-tabs/property-info-tabs.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PropertyDetailComponent } from './components/property-detail/property-d
     ListPropertyComponent,
     PropertyComponent,
     PropertiesComponent,
-    PropertyDetailComponent
+    PropertyDetailComponent,
+    PropertyInfoTabsComponent
   ],
   imports: [
     BrowserModule,

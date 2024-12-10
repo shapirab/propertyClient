@@ -1,2 +1,23 @@
-<p>property-detail works!</p>
-<div>{{property?.address?.city}}</div>
+<div class="property--container">
+  <div class="property__card">
+    <img class="card__img" [src]="url" alt="">
+    <h1 class="property--header">{{property?.title}}</h1>
+    <div class="card__features">
+      <p class="property--features">{{property?.numberOfBedrooms}} BHK {{property?.type}} &#64;
+        {{property?.commercialUse?.price}} USD</p>
+      <p class="property--features">in {{property?.address?.state}}</p>
+    </div>
+    <div class="barrier"></div>
+    <div class="card__details">
+      <p>Build Area: <span>{{property?.builtArea}} sqft</span></p>
+      <p>Carpet Area: <span>{{property?.carpetArea}} sqft</span></p>
+      <p>Furnishing Type: <span>{{getFurnishingText(property?.furnishing)}}</span></p>
+    </div>
+    <div class="barrier"></div>
+    <div class="buttons">
+      <button class="btn btn--primary">Like</button>
+      <button class="btn btn--secondary">Message</button>
+    </div>
+  </div>
+  <app-property-info-tabs></app-property-info-tabs>
+</div>

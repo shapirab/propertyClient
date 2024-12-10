@@ -4,6 +4,7 @@ import { PropertyType } from "./propertyType";
 
 export interface Property{
   id: number,
+  title: string,
   type: PropertyType,
   profileImage: string | ArrayBuffer | null | undefined,
   numberOfBedrooms: number,

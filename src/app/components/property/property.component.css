@@ -11,19 +11,8 @@
   object-fit: cover;
 }
 
-.property--header{
-  font-size: 3rem;
-  color: rgb(25, 125, 192);
-  font-weight: 700;
-  text-transform: capitalize;
-}
-
 .property--details{
   margin-bottom: 1rem;
-}
-
-.property--features{
-  font-weight: 700;
 }
 
 .property--financial{
@@ -43,8 +32,4 @@ p{
   margin: 0;
 }
 
-.barrier{
-  height: 1px;
-  width: 100%;
-  background-color: rgba(0,0,0,0.1);
-}
+

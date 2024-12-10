@@ -1,0 +1,64 @@
+.property--container{
+  display: flex;
+  padding: 5rem;
+}
+
+.property__card{
+  padding: 2rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.property--header{
+  margin-top: 2rem;
+}
+
+.card__img{
+
+}
+
+.card__features{
+  margin-bottom: 1.5rem;
+}
+
+.property--features{
+  margin: 0;
+}
+
+.card__details{
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card__details span{
+  font-weight: 400;
+}
+
+.card__details p{
+  margin: 0;
+}
+
+.buttons{
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+}
+
+.btn{
+  width: 100%;
+  color: #fff;
+
+}
+
+.btn--primary{
+  background-color: rgb(39, 39, 232);
+  border-radius: 10px 0 0 10px;
+  box-shadow: -3px -3px 10px #ccc;
+}
+
+.btn--secondary{
+  background-color: rgb(19, 173, 19);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 3px 3px 10px #ccc;
+}
