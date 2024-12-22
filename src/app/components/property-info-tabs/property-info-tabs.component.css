@@ -1,0 +1,29 @@
+.tabs__tab-bars{
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  margin-left: 1rem;
+}
+
+.tabs__tab{
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.tabs__tab a{
+  padding: 1rem 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-bottom: transparent;
+  width: 100%;
+  margin: 0;
+}
+
+.tabs__tab a.active-tab{
+  border-bottom: 5px solid #4daad1;
+}

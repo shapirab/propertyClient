@@ -12,6 +12,10 @@ import { PropertyComponent } from './components/property/property.component';
 import { PropertiesComponent } from './components/properties/properties.component';
 import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
 import { PropertyInfoTabsComponent } from './components/property-info-tabs/property-info-tabs.component';
+import { PropertyOverviewComponent } from './components/property-overview/property-overview.component';
+import { PropertyAddressComponent } from './components/property-address/property-address.component';
+import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
+import { PropertyContactComponent } from './components/property-contact/property-contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { PropertyInfoTabsComponent } from './components/property-info-tabs/prope
     PropertyComponent,
     PropertiesComponent,
     PropertyDetailComponent,
-    PropertyInfoTabsComponent
+    PropertyInfoTabsComponent,
+    PropertyOverviewComponent,
+    PropertyAddressComponent,
+    PropertyPhotosComponent,
+    PropertyContactComponent
   ],
   imports: [
     BrowserModule,

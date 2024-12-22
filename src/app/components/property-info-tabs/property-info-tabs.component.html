@@ -1,1 +1,15 @@
-<p>property-info-tabs works!</p>
+<div>
+  <ul class="tabs__tab-bars">
+    <li class="tabs__tab" ><a [routerLink]="['/property', property?.id, 'overview']"
+      routerLinkActive="active-tab">Overview</a></li>
+    <li class="tabs__tab" ><a [routerLink]="['/property', property?.id, 'address']"
+      routerLinkActive="active-tab">Address</a></li>
+    <li class="tabs__tab" ><a [routerLink]="['/property', property?.id, 'photos']"
+      routerLinkActive="active-tab">Photos</a></li>
+    <li class="tabs__tab" ><a [routerLink]="['/property', property?.id, 'contact']"
+      routerLinkActive="active-tab">Contact</a></li>
+  </ul>
+</div>
+<div>
+<router-outlet></router-outlet>
+</div>

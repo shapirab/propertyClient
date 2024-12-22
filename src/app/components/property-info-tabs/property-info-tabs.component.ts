@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Property } from 'src/app/Models/property';
 
 @Component({
   selector: 'app-property-info-tabs',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-info-tabs.component.css']
 })
 export class PropertyInfoTabsComponent implements OnInit {
-
-  constructor() { }
+  @Input() property: Property | undefined;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(this.property){
+      this.router.navigate(['/property', this.property.id, 'overview']);
+    }
   }
 
 }
