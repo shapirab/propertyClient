@@ -8,6 +8,6 @@ export interface CommercialUse{
   commercialType: CommercialType,
   monthlyPrice?: number,
   price?: number,
-  securityDeposit: number,
-  
+  securityDeposit?: number,
+  maintainance?: number
 }

@@ -1,1 +1,50 @@
-<p>property-overview works!</p>
+<div class="container--overview">
+  <h1 class="property--header">Overview</h1>
+  <div class="overview__body">
+    <div class="prop-value">
+      <p class="prop-value__label">Project Name</p>
+      <p class="prop-value__value">{{property?.title}}</p>
+    </div>
+    <div class="prop-value" *ngIf="property?.type==='Apartment'">
+      <p class="prop-value__label">Floor Number</p>
+      <p class="prop-value__value">{{property?.floor}}</p>
+    </div>
+    <div class="prop-value" *ngIf="property?.type==='House'">
+      <p class="prop-value__label">Number of Floors</p>
+      <p class="prop-value__value">{{property?.totalFloors}}</p>
+    </div>
+    <div class="prop-value">
+      <p class="prop-value__label">Age of Property</p>
+      <p class="prop-value__value">{{property?.propertyAge}}</p>
+    </div>
+    <div class="prop-value">
+      <p class="prop-value__label">Possesion</p>
+      <p class="prop-value__value">{{property?.availibility}}</p>
+    </div>
+    <div class="prop-value">
+      <p class="prop-value__label">About Property</p>
+      <p class="prop-value__value">{{property?.numberOfBedrooms}} BHK, {{property?.numberOfBedrooms}}
+        bedrooms, {{property?.carParking}}</p>
+    </div>
+    <div class="prop-value">
+      <p class="prop-value__label">Main Entrence</p>
+      <p class="prop-value__value">{{property?.mainEntrance}}</p>
+    </div>
+    <div class="prop-value">
+      <p class="prop-value__label">Gate Entrence</p>
+      <p class="prop-value__value">{{property?.isGate ? 'yes' : 'no'}}</p>
+    </div>
+    <div class="prop-value" *ngIf="property?.commercialUse?.commercialType === 'rent'">
+      <p class="prop-value__label">Security Deposit</p>
+      <p class="prop-value__value">${{ property?.commercialUse?.securityDeposit | number: '1.0-0'}}</p>
+    </div>
+    <div class="prop-value" *ngIf="property?.commercialUse?.commercialType === 'sell'">
+      <p class="prop-value__label">Price</p>
+      <p class="prop-value__value">${{property?.commercialUse?.price | number: '1.0-0'}}</p>
+    </div>
+    <div class="prop-value" *ngIf="property?.commercialUse?.maintainance">
+      <p class="prop-value__label">Maintainance</p>
+      <p class="prop-value__value">${{property?.commercialUse?.maintainance | number: '1.0-0'}}</p>
+    </div>
+  </div>
+</div>

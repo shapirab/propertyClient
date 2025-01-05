@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Furnishing, Property } from '../Models/property';
 import { PropertyType } from '../Models/propertyType';
 import { CommercialType } from '../Models/commercialUse';
+import { ParkingType } from '../Models/parkingType';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,9 @@ export class PropertyService {
         type: PropertyType.House,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
+        propertyAge: 2,
+        floor: 2,
+        carParking: ParkingType.DrivewayParking,
         furnishing: Furnishing['Fully Furnished'],
         address: {
           city: 'Jerusalem',
@@ -48,10 +52,10 @@ export class PropertyService {
           id: 1,
           commercialType: CommercialType.Sell,
           price: 100_000,
-          securityDeposit: 0
         },
         builtArea: 1200,
-        carpetArea: 900
+        carpetArea: 900,
+        isGate: true
       },
       {
         id: 2,
@@ -70,7 +74,6 @@ export class PropertyService {
           id: 1,
           commercialType: CommercialType.Sell,
           price: 200_000,
-          securityDeposit: 0
         }
       },
       {
@@ -84,6 +87,7 @@ export class PropertyService {
           city: 'Jerusalem',
           state: 'Israel'
         },
+        floor: 2,
         availibility: new Date(),
         totalPropertyArea: 80,
         commercialUse: {
@@ -116,7 +120,7 @@ export class PropertyService {
       {
         id: 5,
         title: 'Dream World Palace',
-        type: PropertyType.Apartment,
+        type: PropertyType.House,
         profileImage: '../../assets/images/house_default.png',
         numberOfBedrooms: 3,
         furnishing: Furnishing['Not Furnished'],
@@ -124,13 +128,15 @@ export class PropertyService {
           city: 'Jerusalem',
           state: 'Israel'
         },
+        totalFloors: 3,
         availibility: new Date(2025, 11, 11),
         totalPropertyArea: 80,
         commercialUse: {
           id: 2,
           commercialType: CommercialType.Rent,
           monthlyPrice: 1000,
-          securityDeposit: 1000
+          securityDeposit: 1000,
+          maintainance: 300
         }
       }
     ]
