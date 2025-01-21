@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Property } from 'src/app/Models/property';
+import { PropertyService } from 'src/app/services/property.service';
 
 @Component({
   selector: 'app-property-address',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-address.component.css']
 })
 export class PropertyAddressComponent implements OnInit {
-
-  constructor() { }
+  property: Property | undefined;
+  constructor(private activeRoute: ActivatedRoute, private propertiesService: PropertyService) { }
 
   ngOnInit(): void {
+    this.activeRoute.parent?.params.subscribe(params => {
+      let propertyID = +params['id'];
+      this.property = this.propertiesService.getPropertyById(propertyID);
+    });
   }
 
 }

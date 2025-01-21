@@ -17,7 +17,6 @@ export class PropertyOverviewComponent implements OnInit {
     this.activeRoute.parent?.params.subscribe(params => {
       let propertyID = +params['id'];
       this.property = this.propertiesService.getPropertyById(propertyID);
-      console.log(this.property?.commercialUse.commercialType)
     });
   }
 

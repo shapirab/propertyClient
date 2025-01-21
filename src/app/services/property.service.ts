@@ -43,6 +43,7 @@ export class PropertyService {
         carParking: ParkingType.DrivewayParking,
         furnishing: Furnishing['Fully Furnished'],
         address: {
+          street: '5b Yaakov Street',
           city: 'Jerusalem',
           state: 'Israel'
         },
@@ -55,7 +56,18 @@ export class PropertyService {
         },
         builtArea: 1200,
         carpetArea: 900,
-        isGate: true
+        isGate: true,
+        photos: [
+          {id: 1, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 2, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 3, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 4, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 5, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 6, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 7, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 8, url: 'assets/images/mountains.jpg', isMain: false},
+
+        ]
       },
       {
         id: 2,
@@ -65,6 +77,7 @@ export class PropertyService {
         numberOfBedrooms: 2,
         furnishing: Furnishing['Semi Furnished'],
         address: {
+          street: '25 Beni Har',
           city: 'Tel Aviv',
           state: 'Israel'
         },
@@ -74,7 +87,14 @@ export class PropertyService {
           id: 1,
           commercialType: CommercialType.Sell,
           price: 200_000,
-        }
+        },
+        photos: [
+          {id: 1, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 2, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 3, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 4, url: 'assets/images/mountains.jpg', isMain: false},
+
+        ]
       },
       {
         id: 3,
@@ -84,6 +104,7 @@ export class PropertyService {
         numberOfBedrooms: 3,
         furnishing: Furnishing['Not Furnished'],
         address: {
+          street: '27 HaNaalaim Street',
           city: 'Jerusalem',
           state: 'Israel'
         },
@@ -94,8 +115,15 @@ export class PropertyService {
           id: 2,
           commercialType: CommercialType.Rent,
           monthlyPrice: 1000,
-          securityDeposit: 1000
-        }
+          securityDeposit: 1000,
+        },
+        photos: [
+          {id: 1, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 2, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 3, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 4, url: 'assets/images/mountains.jpg', isMain: false},
+
+        ]
       },
       {
         id: 4,
@@ -105,6 +133,7 @@ export class PropertyService {
         numberOfBedrooms: 3,
         furnishing: Furnishing['Semi Furnished'],
         address: {
+          street: '508 Jafa Street',
           city: 'Jerusalem',
           state: 'Israel'
         },
@@ -115,7 +144,14 @@ export class PropertyService {
           commercialType: CommercialType.Rent,
           monthlyPrice: 1000,
           securityDeposit: 1000
-        }
+        },
+        photos: [
+          {id: 1, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 2, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 3, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 4, url: 'assets/images/mountains.jpg', isMain: false},
+
+        ]
       },
       {
         id: 5,
@@ -125,6 +161,7 @@ export class PropertyService {
         numberOfBedrooms: 3,
         furnishing: Furnishing['Not Furnished'],
         address: {
+          street: '44 Mishkenot Avenue',
           city: 'Jerusalem',
           state: 'Israel'
         },
@@ -137,7 +174,14 @@ export class PropertyService {
           monthlyPrice: 1000,
           securityDeposit: 1000,
           maintainance: 300
-        }
+        },
+        photos: [
+          {id: 1, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 2, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 3, url: 'assets/images/mountains.jpg', isMain: false},
+          {id: 4, url: 'assets/images/mountains.jpg', isMain: false},
+
+        ]
       }
     ]
   }

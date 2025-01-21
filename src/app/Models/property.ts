@@ -1,5 +1,6 @@
 import { CommercialUse } from "./commercialUse";
 import { ParkingType } from "./parkingType";
+import { Photo } from "./photo";
 import { PropertyType } from "./propertyType";
 
 export interface Property{
@@ -10,6 +11,7 @@ export interface Property{
   numberOfBedrooms: number,
   furnishing: Furnishing,
   address:{
+    street: string,
     city: string,
     state: string
   }
@@ -24,8 +26,9 @@ export interface Property{
   builtArea?: number,
   carpetArea?: number,
   carParking?: ParkingType,
-  commercialUse: CommercialUse
-  comments?: string,
+  commercialUse: CommercialUse,
+  photos: Photo[],
+  comments?: string
 }
 
 export enum Furnishing{

@@ -1,1 +1,12 @@
-<p>property-photos works!</p>
+<div class="photos--container">
+  <div class="photos__selected"></div>
+  <div class="gallery__container">
+    <div class="arrow left" (click)="scrollLeft()">&#10094;</div>
+    <div class="photos__gallery">
+      <div class="photos__photo" *ngFor="let photo of property?.photos">
+        <img src="{{photo.url}}" alt="">
+      </div>
+    </div>
+    <div class="arrow right" (click)="scrollRight()">&#10095;</div>
+  </div>
+</div>
