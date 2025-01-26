@@ -58,15 +58,13 @@ export class PropertyService {
         carpetArea: 900,
         isGate: true,
         photos: [
-          {id: 1, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 2, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 3, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 4, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 5, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 6, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 7, url: 'assets/images/mountains.jpg', isMain: false},
-          {id: 8, url: 'assets/images/mountains.jpg', isMain: false},
-
+          {id: 1, url: 'assets/images/room1.jpg', isMain: false},
+          {id: 2, url: 'assets/images/room2.jpg', isMain: false},
+          {id: 3, url: 'assets/images/room3.jpg', isMain: false},
+          {id: 4, url: 'assets/images/room4.jpg', isMain: false},
+          {id: 5, url: 'assets/images/room5.jpg', isMain: false},
+          {id: 6, url: 'assets/images/room6.jpg', isMain: false},
+          {id: 7, url: 'assets/images/room7.jpg', isMain: false}
         ]
       },
       {
