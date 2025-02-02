@@ -64,6 +64,12 @@
   margin-left: 10px;
 }
 
+.arrow.disabled{
+  opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed
+}
+
 /* .photos__gallery{
   width: 100%;
   height: 30%;

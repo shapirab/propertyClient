@@ -15,6 +15,10 @@ export class PropertyPhotosComponent implements OnInit {
 
   photoWidth = 200;
   photoPosition = this.photoWidth * 4;
+  minPhotoPosition = this.photoWidth * 4;
+
+  leftScrollArrow = document.querySelector('.left');
+  rightScrollArrow = document.querySelector('.right');
 
   constructor(private activeRoute: ActivatedRoute, private propertiesService: PropertyService,
     private renderer: Renderer2) { }
@@ -29,54 +33,80 @@ export class PropertyPhotosComponent implements OnInit {
     });
   }
 
-  scrollLeft(){
-    let gallery = document.querySelector('.photos__gallery');
-    gallery?.scrollBy({
-      left: -this.photoWidth,
-      behavior: 'smooth'
-    });
-  }
-  //TODO: fix so that the scroll is disabled if no more photos exist
   scrollRight(){
     let gallery = document.querySelector('.photos__gallery');
-    if(this.checkPhotoPosition()){
+    if(this.checkPhotoRightPosition()){
+      this.enableLeftScroll();
       gallery?.scrollBy({
         left: this.photoWidth,
         behavior: 'smooth'
       });
-      this.photoPosition+= this.photoWidth;
+      this.photoPosition += this.photoWidth;
     }
-    else{
-      this.disableRightScroll();
-    }
+    //This change from coPilot made the difference: call the chechPhoto() again to disable if neccessary
+    this.checkPhotoRightPosition();
   }
-  // scrollRight(){
-  //   let gallery = document.querySelector('.photos__gallery');
-  //   gallery?.scrollBy({
-  //       left: this.photoWidth,
-  //       behavior: 'smooth'
-  //     });
-  // }
+
+scrollLeft(){
+    let gallery = document.querySelector('.photos__gallery');
+    if(this.checkPhotoLeftPosition()){
+      this.enableRightScroll();
+      gallery?.scrollBy({
+        left: -this.photoWidth,
+        behavior: 'smooth'
+      });
+      this.photoPosition -= this.photoWidth;
+    }
+    this.checkPhotoLeftPosition();
+  }
 
   selectPhoto(photo: Photo){
     this.selectedPhoto = photo;
   }
 
-  checkPhotoPosition(): boolean{
+  checkPhotoRightPosition(): boolean{
     if(this.property?.photos.length){
-      let endOfGallery = this.property?.photos.length * this.photoWidth;
-      console.log(`endOfGallery: ${endOfGallery}`)
-      console.log(`photoPosition: ${this.photoPosition}`)
-      this.photoPosition < endOfGallery ? true : false
+      let endOfGallery = (this.property.photos.length) * this.photoWidth; // Adjust the end position
+      if (this.photoPosition < endOfGallery) {
+        this.enableRightScroll();
+        return true;
+      } else {
+        this.disableRightScroll();
+        return false;
+      }
+    }
+    return false;
+  }
+
+checkPhotoLeftPosition(): boolean{
+    if(this.property?.photos.length){
+      if (this.photoPosition > this.minPhotoPosition) {
+        this.enableLeftScroll();
+        return true;
+      } else {
+        this.disableLeftScroll();
+        return false;
+      }
     }
     return false;
   }
 
   disableRightScroll(){
-    console.log('right scroll disabled')
+    let rightScrollBtn = document.querySelector('.right');
+    rightScrollBtn?.classList.add('disabled');
   }
 
   enableRightScroll(){
-    console.log('right scroll enabled')
+    let rightScrollBtn = document.querySelector('.right');
+    rightScrollBtn?.classList.remove('disabled');
+  }
+  disableLeftScroll(){
+    let leftScrollBtn = document.querySelector('.left');
+    leftScrollBtn?.classList.add('disabled');
+  }
+
+  enableLeftScroll(){
+    let leftScrollBtn = document.querySelector('.left');
+    leftScrollBtn?.classList.remove('disabled');
   }
 }
