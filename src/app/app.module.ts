@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,11 @@ import { PropertyOverviewComponent } from './components/property-overview/proper
 import { PropertyAddressComponent } from './components/property-address/property-address.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyContactComponent } from './components/property-contact/property-contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -32,11 +38,15 @@ import { PropertyContactComponent } from './components/property-contact/property
     PropertyOverviewComponent,
     PropertyAddressComponent,
     PropertyPhotosComponent,
-    PropertyContactComponent
+    PropertyContactComponent,
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
