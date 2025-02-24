@@ -16,8 +16,11 @@
       </li>
     </ul>
   </div>
-  <div class="nav--login">
+  <div class="nav--login" *ngIf="!(loginService.currentUser$ | async)">
     <button class="btn--link" (click)="register()">Register</button>
     <button class="btn--link" (click)="login()">Login</button>
+  </div>
+  <div class="nav--login" *ngIf="(loginService.currentUser$ | async)">
+    <button class="btn--link" (click)="logout()">Logout</button>
   </div>
 </div>

@@ -1,0 +1,13 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form{
+  margin-top: 10px;
+}
+
+.login__control{
+  margin-bottom: 10px;
+}

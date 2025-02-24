@@ -10,7 +10,7 @@ import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private dialog: MatDialog) { }
+  constructor(public loginService: LoginService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -20,8 +20,11 @@ export class NavbarComponent implements OnInit {
   }
 
   login(){
-    console.log('login() called');
     this.dialog.open(LoginDialogComponent);
+  }
+
+  logout(){
+    this.loginService.logout();
   }
 
 }
