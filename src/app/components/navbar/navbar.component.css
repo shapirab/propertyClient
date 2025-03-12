@@ -1,6 +1,7 @@
 
 
 .nav{
+  padding: 20px !important;
   display: flex;
   width: 100%;
   background-color: var(--background-color);
@@ -37,6 +38,7 @@ button{
 
 .nav--login{
   margin-left: auto;
+  margin-right: 50px;
 }
 
 .btn--link{
@@ -56,4 +58,8 @@ button{
 
 .selected{
   color: var(--selected-color);
+}
+
+.dropdown-toggle {
+  cursor: pointer;
 }

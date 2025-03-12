@@ -20,7 +20,12 @@
     <button class="btn--link" (click)="register()">Register</button>
     <button class="btn--link" (click)="login()">Login</button>
   </div>
-  <div class="nav--login" *ngIf="(loginService.currentUser$ | async)">
-    <button class="btn--link" (click)="logout()">Logout</button>
+  <!-- (click)="$event.preventDefault()" -->
+  <div class="nav--login" *ngIf="(loginService.currentUser$ | async) as user" dropdown container="body">
+    <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle>
+      Welcome {{user.username | titlecase}}</a>
+    <div class="dropdown-menu" *dropdownMenu>
+      <a class="dropdown-item" (click)="logout()">Logout</a>
+    </div>
   </div>
 </div>
