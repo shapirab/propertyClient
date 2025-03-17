@@ -9,6 +9,7 @@ import { PropertyOverviewComponent } from './components/property-overview/proper
 import { PropertyAddressComponent } from './components/property-address/property-address.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyContactComponent } from './components/property-contact/property-contact.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: 'home',
@@ -16,7 +17,7 @@ const routes: Routes = [
     children: [
       { path: 'rent', component: RentComponent },
       { path: 'buy', component: BuyComponent },
-      { path: 'list-property', component: ListPropertyComponent }
+      { path: 'list-property', component: ListPropertyComponent, canActivate: [AuthGuard] }
     ]
   },
   { path: 'property/:id', component: PropertyDetailComponent,
