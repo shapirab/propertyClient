@@ -45,10 +45,13 @@
   display: flex;
 }
 
+.buttons__back{
+  justify-content: center;
+}
+
 .btn{
   width: 100%;
   color: #fff;
-
 }
 
 .btn--primary{
@@ -61,4 +64,10 @@
   background-color: rgb(19, 173, 19);
   border-radius: 0 10px 10px 0;
   box-shadow: 3px 3px 10px #ccc;
+}
+
+.btn--link{
+  color: rgb(39, 39, 232);
+  border: 1px solid rgb(39, 39, 232);
+  width: auto;
 }

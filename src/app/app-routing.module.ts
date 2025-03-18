@@ -10,6 +10,7 @@ import { PropertyAddressComponent } from './components/property-address/property
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyContactComponent } from './components/property-contact/property-contact.component';
 import { AuthGuard } from './guards/auth.guard';
+import { UnauthorizedComponent } from './components/shared/unauthorized/unauthorized.component';
 
 const routes: Routes = [
   {path: 'home',
@@ -25,9 +26,10 @@ const routes: Routes = [
       {path: 'overview', component: PropertyOverviewComponent },
       { path: 'address', component: PropertyAddressComponent },
       { path: 'photos', component: PropertyPhotosComponent },
-      { path: 'contact', component: PropertyContactComponent }
+      { path: 'contact', component: PropertyContactComponent, canActivate: [AuthGuard] }
     ]
    },
+   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

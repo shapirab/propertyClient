@@ -23,6 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { UnauthorizedComponent } from './components/shared/unauthorized/unauthorized.component';
 
 
 
@@ -42,7 +43,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     PropertyAddressComponent,
     PropertyPhotosComponent,
     PropertyContactComponent,
-    LoginDialogComponent
+    LoginDialogComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,

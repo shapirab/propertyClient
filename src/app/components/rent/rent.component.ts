@@ -12,7 +12,10 @@ export class RentComponent implements OnInit {
   constructor(private propertyService: PropertyService) { }
 
   ngOnInit(): void {
-    this.properties = this.propertyService.getRentalProperties();
+    this.propertyService.getRentalProperties().subscribe({
+      next: res => this.properties = res,
+      error: err => console.log(err)
+    });
   }
 
 }

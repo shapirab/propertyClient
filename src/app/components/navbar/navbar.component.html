@@ -11,8 +11,8 @@
       <li>
         <a routerLink="/home/rent" routerLinkActive="selected">Rent</a>
       </li>
-      <li>
-        <a routerLink="/home/list-property" routerLinkActive="selected">List Property</a>
+      <li *ngIf="loginService.currentUser$ | async">
+        <a routerLink="/home/list-property" routerLinkActive="selected">Add property to listing</a>
       </li>
     </ul>
   </div>

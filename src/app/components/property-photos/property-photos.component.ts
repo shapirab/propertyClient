@@ -26,10 +26,14 @@ export class PropertyPhotosComponent implements OnInit {
   ngOnInit(): void {
     this.activeRoute.parent?.params.subscribe(params => {
       let propertyID = +params['id'];
-      this.property = this.propertiesService.getPropertyById(propertyID);
-      if(!this.selectedPhoto){
-        this.selectedPhoto = this.property?.photos[0];
-      }
+      this.propertiesService.getPropertyById(propertyID).subscribe({
+        next: property => {
+          this.property = property;
+          if(!this.selectPhoto){
+            this.selectedPhoto = this.property.photos[0];
+          }
+        }
+      });
     });
   }
 

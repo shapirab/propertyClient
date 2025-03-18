@@ -16,7 +16,10 @@ export class PropertyOverviewComponent implements OnInit {
   ngOnInit(): void {
     this.activeRoute.parent?.params.subscribe(params => {
       let propertyID = +params['id'];
-      this.property = this.propertiesService.getPropertyById(propertyID);
+      this.propertiesService.getPropertyById(propertyID).subscribe({
+        next: property => this.property = property,
+        error: err => console.log(err)
+      });
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Furnishing, Property } from 'src/app/Models/property';
 import { PropertyService } from 'src/app/services/property.service';
 
@@ -12,7 +12,8 @@ export class PropertyDetailComponent implements OnInit {
   propertyId: number | null = null;
   property: Property | undefined;
   url:string | ArrayBuffer | null | undefined;
-  constructor(private activatedRoute: ActivatedRoute, private propertyService: PropertyService) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private propertyService: PropertyService, private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
@@ -29,7 +30,10 @@ export class PropertyDetailComponent implements OnInit {
 
   getProperty(id: number){
     if(id != null && id > 0){
-      this.property = this.propertyService.getPropertyById(id);
+      this.propertyService.getPropertyById(id).subscribe({
+        next: property => this.property = property,
+        error: err => console.log(err)
+      });
     }
   }
 
@@ -38,6 +42,10 @@ export class PropertyDetailComponent implements OnInit {
       return 'Unknown furnishing status';
     }
     return Furnishing[furnishing];
+  }
+
+  backTolisting(){
+    this.router.navigateByUrl('home');
   }
 
 }
