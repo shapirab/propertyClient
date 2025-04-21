@@ -1,1 +1,20 @@
-<p>list-property works!</p>
+<div class="app-container l-grid">
+  <div class="side-card left-side property-container">
+    <h2 class="header">List your property</h2>
+    <mat-tab-group (selectedTabChange)="onTabChange($event)">
+      <mat-tab label="Basic Info"></mat-tab>
+      <mat-tab label="Pricing and Area"></mat-tab>
+      <mat-tab label="Address"></mat-tab>
+      <mat-tab label="Other details"></mat-tab>
+      <mat-tab label="Photos"></mat-tab>
+    </mat-tab-group>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="side-card right-side">
+    <h2 class="header">Your property preview</h2>
+    <app-property></app-property>
+  </div>
+</div>
+
+
+

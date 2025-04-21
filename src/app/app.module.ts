@@ -20,10 +20,16 @@ import { PropertyContactComponent } from './components/property-contact/property
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { UnauthorizedComponent } from './components/shared/unauthorized/unauthorized.component';
+import { BasicInfoComponent } from './components/addProperty/basic-info/basic-info.component';
+import { PricingFormComponent } from './components/addProperty/pricing-form/pricing-form.component';
+import { PropertyAddressFormComponent } from './components/property-address-form/property-address-form.component';
+import { PropertyDetailsFormComponent } from './components/property-details-form/property-details-form.component';
 
 
 
@@ -44,7 +50,11 @@ import { UnauthorizedComponent } from './components/shared/unauthorized/unauthor
     PropertyPhotosComponent,
     PropertyContactComponent,
     LoginDialogComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    BasicInfoComponent,
+    PricingFormComponent,
+    PropertyAddressFormComponent,
+    PropertyDetailsFormComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +63,9 @@ import { UnauthorizedComponent } from './components/shared/unauthorized/unauthor
     BrowserAnimationsModule,
     MatDialogModule,
     FormsModule,
-    BsDropdownModule
+    BsDropdownModule,
+    MatTabsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

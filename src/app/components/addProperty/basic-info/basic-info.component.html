@@ -1,0 +1,45 @@
+<form #basicForm="ngForm" (ngSubmit)="onBasicFormSubmit(basicForm.value)">
+  <div class="section">
+    <p>I want to</p>
+    <div class="container--btn">
+      <button class="my-btn btn-in">Sell</button>
+      <button class="my-btn btn-out">Rent</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <p>BHK</p>
+    <div class="container--btn">
+      <button class="my-btn btn-in">1</button>
+      <button class="my-btn">2</button>
+      <button class="my-btn">3</button>
+      <button class="my-btn btn-out">4</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <p>Property of type</p>
+    <div class="container--btn">
+      <button class="my-btn btn-in">House</button>
+      <button class="my-btn">Appartment</button>
+      <button class="my-btn btn-out">Duplex</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <p>Furnishing</p>
+    <div class="container--btn">
+      <button class="my-btn btn-in">Full</button>
+      <button class="my-btn">Semi</button>
+      <button class="my-btn btn-out">Unfurnished</button>
+    </div>
+  </div>
+
+  <div class="section">
+   <input type="text" class="form-control" placeholder="City">
+  </div>
+
+  <div class="section">
+    <button class="btn btn-primary" type="submit">Next</button>
+  </div>
+</form>

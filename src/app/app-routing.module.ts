@@ -11,6 +11,10 @@ import { PropertyPhotosComponent } from './components/property-photos/property-p
 import { PropertyContactComponent } from './components/property-contact/property-contact.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UnauthorizedComponent } from './components/shared/unauthorized/unauthorized.component';
+import { BasicInfoComponent } from './components/addProperty/basic-info/basic-info.component';
+import { PricingFormComponent } from './components/addProperty/pricing-form/pricing-form.component';
+import { PropertyAddressFormComponent } from './components/property-address-form/property-address-form.component';
+import { PropertyDetailsFormComponent } from './components/property-details-form/property-details-form.component';
 
 const routes: Routes = [
   {path: 'home',
@@ -18,7 +22,16 @@ const routes: Routes = [
     children: [
       { path: 'rent', component: RentComponent },
       { path: 'buy', component: BuyComponent },
-      { path: 'list-property', component: ListPropertyComponent, canActivate: [AuthGuard] }
+      { path: 'list-property', component: ListPropertyComponent,
+        children: [
+          // { path: 'basic-info', component: BasicInfoComponent },
+          { path: 'basic-info', component: BasicInfoComponent, canActivate: [AuthGuard] },
+          { path: 'pricing', component: PricingFormComponent, canActivate: [AuthGuard] },
+          { path: 'address-form', component: PropertyAddressFormComponent, canActivate: [AuthGuard] },
+          { path: 'details-form', component: PropertyDetailsFormComponent, canActivate: [AuthGuard] },
+
+        ],
+       }
     ]
   },
   { path: 'property/:id', component: PropertyDetailComponent,
