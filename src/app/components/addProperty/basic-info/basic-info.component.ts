@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-basic-info',
@@ -6,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic-info.component.css']
 })
 export class BasicInfoComponent implements OnInit {
-
-  constructor() { }
+  isRent: boolean = false;
+  constructor(private router: Router, private route: ActivatedRoute){ }
 
   ngOnInit(): void {
+
   }
 
-  onBasicFormSubmit(values: any){}
-
+  onBasicFormSubmit(values: any){
+    console.log('basicInfoComponent::onBasicFormSubmit()')
+    this.router.navigateByUrl(`home/list-property/pricing?isRent=${this.isRent}`);
+  }
 }

@@ -1,1 +1,32 @@
-<p>pricing-form works!</p>
+<form #pricingForm="ngForm" (ngSubmit)="onPricingFormSubmit(pricingForm.value)">
+  <div *ngIf="isRent">
+    <div class="section">
+      <label for="rent">Rent</label>
+      <input type="number" name="rent" id="rent" class="form-control">
+    </div>
+    <div class="section">
+      <label for="security">Security deposit</label>
+      <input type="number" name="security" id="security" class="form-control">
+    </div>
+  </div>
+  <div *ngIf="!isRent" class="section">
+    <label for="price">Price</label>
+    <input type="number" name="price" id="price" class="form-control">
+  </div>
+  <div class="section">
+    <label for="maintenance">Maintenance</label>
+    <input type="number" name="maintenance" id="maintenance" class="form-control">
+  </div>
+  <div class="section">
+    <label for="build-area">Build area</label>
+    <input type="number" name="build-area" id="build-area" class="form-control">
+  </div>
+  <div class="section">
+    <label for="carpet-area">Carpet area</label>
+    <input type="number" name="carpet-area" id="carpet-area" class="form-control">
+  </div>
+
+  <div class="section">
+    <button class="btn btn-primary" type="submit">Next</button>
+  </div>
+</form>

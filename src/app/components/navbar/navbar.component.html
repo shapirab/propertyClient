@@ -11,12 +11,12 @@
       <li>
         <a routerLink="/home/rent" routerLinkActive="selected">Rent</a>
       </li>
-      <!-- <li>
-        <a routerLink="/home/list-property" routerLinkActive="selected">Add property to listing</a>
-      </li> -->
-      <li *ngIf="loginService.currentUser$ | async">
+      <li>
         <a routerLink="/home/list-property" routerLinkActive="selected">Add property to listing</a>
       </li>
+      <!-- <li *ngIf="loginService.currentUser$ | async">
+        <a routerLink="/home/list-property" routerLinkActive="selected">Add property to listing</a>
+      </li> -->
     </ul>
   </div>
   <div class="nav--login" *ngIf="!(loginService.currentUser$ | async)">

@@ -24,9 +24,10 @@ const routes: Routes = [
       { path: 'buy', component: BuyComponent },
       { path: 'list-property', component: ListPropertyComponent,
         children: [
-          // { path: 'basic-info', component: BasicInfoComponent },
-          { path: 'basic-info', component: BasicInfoComponent, canActivate: [AuthGuard] },
-          { path: 'pricing', component: PricingFormComponent, canActivate: [AuthGuard] },
+          { path: 'basic-info', component: BasicInfoComponent },
+          { path: 'pricing', component: PricingFormComponent},
+          // { path: 'basic-info', component: BasicInfoComponent, canActivate: [AuthGuard] },
+          // { path: 'pricing', component: PricingFormComponent, canActivate: [AuthGuard] },
           { path: 'address-form', component: PropertyAddressFormComponent, canActivate: [AuthGuard] },
           { path: 'details-form', component: PropertyDetailsFormComponent, canActivate: [AuthGuard] },
 

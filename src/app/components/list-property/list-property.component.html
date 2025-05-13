@@ -1,7 +1,7 @@
 <div class="app-container l-grid">
   <div class="side-card left-side property-container">
     <h2 class="header">List your property</h2>
-    <mat-tab-group (selectedTabChange)="onTabChange($event)">
+    <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="onTabChange($event)">
       <mat-tab label="Basic Info"></mat-tab>
       <mat-tab label="Pricing and Area"></mat-tab>
       <mat-tab label="Address"></mat-tab>
