@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-pricing-form',
@@ -8,22 +9,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PricingFormComponent implements OnInit {
   isRent: boolean;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getIsRent();
   }
 
   getIsRent() {
-    this.route.queryParams.subscribe(params => {
-      console.log('pricingFormComponent::getIsRent(). params: ', params)
-      this.isRent = params['isRent'] === 'true';
-      console.log('pricingFormComponent::getIsRent(). isRent: ', this.isRent)
-    });
+    this.route.queryParams
+      .pipe(take(1))
+      .subscribe(params => {
+        this.isRent = params['isRent'] === 'true';
+      });
   }
 
   onPricingFormSubmit(values: any){
     console.log('pricingFormComponent::onPricingFormSubmit(). values: ', values)
+    this.router.navigateByUrl(`home/list-property/address-form`);
   }
 }
 

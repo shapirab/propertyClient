@@ -26,9 +26,10 @@ const routes: Routes = [
         children: [
           { path: 'basic-info', component: BasicInfoComponent },
           { path: 'pricing', component: PricingFormComponent},
+          { path: 'address-form', component: PropertyAddressFormComponent},
           // { path: 'basic-info', component: BasicInfoComponent, canActivate: [AuthGuard] },
           // { path: 'pricing', component: PricingFormComponent, canActivate: [AuthGuard] },
-          { path: 'address-form', component: PropertyAddressFormComponent, canActivate: [AuthGuard] },
+          // { path: 'address-form', component: PropertyAddressFormComponent, canActivate: [AuthGuard] },
           { path: 'details-form', component: PropertyDetailsFormComponent, canActivate: [AuthGuard] },
 
         ],

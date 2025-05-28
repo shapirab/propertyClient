@@ -1,5 +1,5 @@
 <form #pricingForm="ngForm" (ngSubmit)="onPricingFormSubmit(pricingForm.value)">
-  <div *ngIf="isRent">
+  <div *ngIf="isRent === true">
     <div class="section">
       <label for="rent">Rent</label>
       <input type="number" name="rent" id="rent" class="form-control">

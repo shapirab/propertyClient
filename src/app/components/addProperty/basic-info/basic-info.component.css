@@ -7,22 +7,40 @@
   gap: 5px;
 }
 
-.my-btn{
+/* .my-btn{
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: transparent;
   padding: 0.3rem 1.5rem;
   font-size: 0.7rem;
+} */
+
+.my-btn {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  padding: 0.3rem 1.5rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.my-btn:focus{
+input[type="radio"]:checked + .my-btn {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+input[type="radio"]:focus + .my-btn {
   background-color: #5672cc;
-  color: #fff;
+  color: white;
 }
 
-.btn-in{
+.btn-in {
   border-radius: 20px 0 0 20px;
 }
 
-.btn-out{
+.btn-out {
   border-radius: 0 20px 20px 0;
 }
