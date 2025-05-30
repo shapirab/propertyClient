@@ -1,53 +1,147 @@
 <form #basicForm="ngForm" (ngSubmit)="onBasicFormSubmit(basicForm.value)">
-  <!-- <div class="section"> -->
-  <!-- <p>I want to</p>
-  <div class="container--btn">
-    <button type="button" class="my-btn btn-in" (click)="isRent=false">Sell</button>
-    <button type="button" class="my-btn btn-out" (click)="isRent=true">Rent</button>
-  </div>
-  </div> -->
-  <div class="container--btn">
-    <input
-      type="radio"
-      id="sell"
-      name="transactionType"
-      value="sell"
-      [(ngModel)]="transactionType"
-      (change)="isRent = false"
-      hidden
-    />
-    <label class="my-btn btn-in" for="sell">Sell</label>
+  <div class="section">
+    <p>I want to</p>
+    <div class="container--btn">
+      <input
+        type="radio"
+        id="sell"
+        name="transactionType"
+        value="sell"
+        [(ngModel)]="transactionType"
+        (change)="isRent = false"
+        hidden
+      />
+      <label class="my-btn btn-in" for="sell">Sell</label>
 
-    <input
-      type="radio"
-      id="rent"
-      name="transactionType"
-      value="rent"
-      [(ngModel)]="transactionType"
-      (change)="isRent = true"
-      hidden
-    />
-    <label class="my-btn btn-out" for="rent">Rent</label>
+      <input
+        type="radio"
+        id="rent"
+        name="transactionType"
+        value="rent"
+        [(ngModel)]="transactionType"
+        (change)="isRent = true"
+        hidden
+      />
+      <label class="my-btn btn-out" for="rent">Rent</label>
+    </div>
   </div>
 
   <div class="section">
     <p>BHK</p>
     <div class="container--btn">
-      <button type="button" class="my-btn btn-in" (click)="selectedBHK=1">1</button>
-      <button type="button" class="my-btn" (click)="selectedBHK=2">2</button>
-      <button type="button" class="my-btn" (click)="selectedBHK=3">3</button>
-      <button type="button" class="my-btn btn-out" (click)="selectedBHK=4">4</button>
+      <input
+        type="radio"
+        id="selectedBHK_1"
+        name="selectedBHK"
+        value="1"
+        [(ngModel)]="selectedBHK"
+        hidden
+      />
+      <label class="my-btn btn-in" for="selectedBHK_1">1</label>
+
+      <input
+        type="radio"
+        id="selectedBHK_2"
+        name="selectedBHK"
+        value="2"
+        [(ngModel)]="selectedBHK"
+        hidden
+      />
+      <label class="my-btn" for="selectedBHK_2">2</label>
+
+      <input
+        type="radio"
+        id="selectedBHK_3"
+        name="selectedBHK"
+        value="3"
+        [(ngModel)]="selectedBHK"
+        hidden
+      />
+      <label class="my-btn" for="selectedBHK_3">3</label>
+
+      <input
+        type="radio"
+        id="selectedBHK_4"
+        name="selectedBHK"
+        value="4"
+        [(ngModel)]="selectedBHK"
+        hidden
+      />
+      <label class="my-btn btn-out" for="selectedBHK_4">4</label>
     </div>
   </div>
 
   <div class="section">
-    <p>Property of type</p>
+    <p>Property Type</p>
     <div class="container--btn">
-      <button type="button" class="my-btn btn-in" (click)="selectedPropertyType='house'">House</button>
-      <button type="button" class="my-btn" (click)="selectedPropertyType='appartment'">Appartment</button>
-      <button type="button" class="my-btn btn-out" (click)="selectedPropertyType='duplex'">Duplex</button>
+      <input
+        type="radio"
+        id="selectedPropertyType_1"
+        name="selectedPropertyType"
+        value="house"
+        [(ngModel)]="selectedPropertyType"
+        hidden
+      />
+      <label class="my-btn btn-in" for="selectedPropertyType_1">House</label>
+
+      <input
+        type="radio"
+        id="selectedPropertyType_2"
+        name="selectedPropertyType"
+        value="appartment"
+        [(ngModel)]="selectedPropertyType"
+        hidden
+      />
+      <label class="my-btn" for="selectedPropertyType_2">Appartment</label>
+
+      <input
+        type="radio"
+        id="selectedPropertyType_3"
+        name="selectedPropertyType"
+        value="duplex"
+        [(ngModel)]="selectedPropertyType"
+        hidden
+      />
+      <label class="my-btn" for="selectedPropertyType_3">Duplex</label>
     </div>
   </div>
+
+    <p>Furnishing</p>
+    <div class="container--btn">
+      <input
+        type="radio"
+        id="selectedFurnishing_1"
+        name="selectedFurnishing"
+        value="full"
+        [(ngModel)]="selectedFurnishing"
+        hidden
+      />
+      <label class="my-btn btn-in" for="selectedFurnishing_1">Full</label>
+
+      <input
+        type="radio"
+        id="selectedFurnishing_2"
+        name="selectedFurnishing"
+        value="furnished"
+        [(ngModel)]="selectedFurnishing"
+        hidden
+      />
+      <label class="my-btn" for="selectedFurnishing_2">Furnished</label>
+
+      <input
+        type="radio"
+        id="selectedFurnishing_3"
+        name="selectedFurnishing"
+        value="semi"
+        [(ngModel)]="selectedFurnishing"
+        hidden
+      />
+      <label class="my-btn" for="selectedFurnishing_3">Semi Furnished</label>
+    </div>
+
+
+
+
 
   <div class="section">
     <p>Furnishing</p>

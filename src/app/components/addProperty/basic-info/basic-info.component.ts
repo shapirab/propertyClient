@@ -26,6 +26,7 @@ export class BasicInfoComponent implements OnInit {
   }
 
   onBasicFormSubmit(values: any){
+    console.log('basicInfoComponent::onBasicFormSubmit(), Value: ', values)
     this.router.navigateByUrl(`home/list-property/pricing?isRent=${this.isRent}`);
   }
 }
