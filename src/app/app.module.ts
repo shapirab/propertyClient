@@ -30,6 +30,7 @@ import { BasicInfoComponent } from './components/addProperty/basic-info/basic-in
 import { PricingFormComponent } from './components/addProperty/pricing-form/pricing-form.component';
 import { PropertyAddressFormComponent } from './components/property-address-form/property-address-form.component';
 import { PropertyDetailsFormComponent } from './components/property-details-form/property-details-form.component';
+import { CurrencyInputDirective } from './directives/currency-input.directive';
 
 
 
@@ -54,7 +55,8 @@ import { PropertyDetailsFormComponent } from './components/property-details-form
     BasicInfoComponent,
     PricingFormComponent,
     PropertyAddressFormComponent,
-    PropertyDetailsFormComponent
+    PropertyDetailsFormComponent,
+    CurrencyInputDirective
   ],
   imports: [
     BrowserModule,

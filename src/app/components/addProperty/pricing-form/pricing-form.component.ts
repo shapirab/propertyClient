@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { take } from 'rxjs';
@@ -9,6 +10,10 @@ import { take } from 'rxjs';
 })
 export class PricingFormComponent implements OnInit {
   isRent: boolean;
+  rent: number;
+  securityDeposit: number;
+  maintenance: number;
+  sellingAskingPrice: number;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

@@ -2,20 +2,20 @@
   <div *ngIf="isRent === true">
     <div class="section">
       <label for="rent">Rent</label>
-      <input type="number" name="rent" id="rent" class="form-control">
+      <input type="text" [(ngModel)]="rent" name="rent" id="rent" class="form-control" appCurrencyInput>
     </div>
     <div class="section">
       <label for="security">Security deposit</label>
-      <input type="number" name="security" id="security" class="form-control">
+      <input type="text" [(ngModel)]="securityDeposit" name="security" id="security" class="form-control" appCurrencyInput>
     </div>
   </div>
   <div *ngIf="!isRent" class="section">
     <label for="price">Price</label>
-    <input type="number" name="price" id="price" class="form-control">
+    <input type="text" [(ngModel)]="sellingAskingPrice" name="price" id="price" class="form-control" appCurrencyInput>
   </div>
   <div class="section">
     <label for="maintenance">Maintenance</label>
-    <input type="number" name="maintenance" id="maintenance" class="form-control">
+    <input type="text" [(ngModel)]="maintenance" name="maintenance" id="maintenance" class="form-control" appCurrencyInput>
   </div>
   <div class="section">
     <label for="build-area">Build area</label>
