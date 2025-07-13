@@ -1,1 +1,22 @@
-<p>property-address-form works!</p>
+<form #addressForm="ngForm" (ngSubmit)="onAddressSubmit(addressForm.value)">
+  <div class="section" *ngIf="isAppartment">
+    <label for="floor">Floor</label>
+    <input type="number" [(ngModel)]="floor" name="floor" id="floor" class="form-control">
+  </div>
+  <div class="section" *ngIf="!isAppartment">
+    <label for="totalFloors">Total Floors</label>
+    <input type="number" [(ngModel)]="totalFloors" name="totalFloors" id="totalFloors" class="form-control">
+  </div>
+  <div class="section">
+    <label for="address">Address</label>
+    <input type="text" [(ngModel)]="address" name="address" id="address" class="form-control">
+  </div>
+  <div class="section">
+    <label for="landmark">Landmark</label>
+    <input type="text" [(ngModel)]="landmark" name="landmark" id="landmark" class="form-control">
+  </div>
+  <div class="section action">
+    <button class="btn btn-primary" type="submit">Next</button>
+    <button class="btn btn-secondary" type="submit">Back</button>
+  </div>
+</form>

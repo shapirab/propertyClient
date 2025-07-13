@@ -102,7 +102,7 @@
         [(ngModel)]="selectedPropertyType"
         hidden
       />
-      <label class="my-btn" for="selectedPropertyType_3">Duplex</label>
+      <label class="my-btn btn-out" for="selectedPropertyType_3">Duplex</label>
     </div>
   </div>
 
@@ -126,7 +126,7 @@
         [(ngModel)]="selectedFurnishing"
         hidden
       />
-      <label class="my-btn" for="selectedFurnishing_2">Furnished</label>
+      <label class="my-btn" for="selectedFurnishing_2">Unfurnished</label>
 
       <input
         type="radio"
@@ -136,21 +136,8 @@
         [(ngModel)]="selectedFurnishing"
         hidden
       />
-      <label class="my-btn" for="selectedFurnishing_3">Semi Furnished</label>
+      <label class="my-btn btn-out" for="selectedFurnishing_3">Semi Furnished</label>
     </div>
-
-
-
-
-
-  <div class="section">
-    <p>Furnishing</p>
-    <div class="container--btn">
-      <button type="button" class="my-btn btn-in" (click)="selectedFurnishing='full'">Full</button>
-      <button type="button" class="my-btn" (click)="selectedFurnishing='semi'">Semi</button>
-      <button type="button" class="my-btn btn-out" (click)="selectedFurnishing='unfurnished'">Unfurnished</button>
-    </div>
-  </div>
 
   <div class="section">
    <input type="text" class="form-control" placeholder="City">

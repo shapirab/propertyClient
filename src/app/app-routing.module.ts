@@ -27,10 +27,11 @@ const routes: Routes = [
           { path: 'basic-info', component: BasicInfoComponent },
           { path: 'pricing', component: PricingFormComponent},
           { path: 'address-form', component: PropertyAddressFormComponent},
+          { path: 'details-form', component: PropertyDetailsFormComponent },
           // { path: 'basic-info', component: BasicInfoComponent, canActivate: [AuthGuard] },
           // { path: 'pricing', component: PricingFormComponent, canActivate: [AuthGuard] },
           // { path: 'address-form', component: PropertyAddressFormComponent, canActivate: [AuthGuard] },
-          { path: 'details-form', component: PropertyDetailsFormComponent, canActivate: [AuthGuard] },
+          // { path: 'details-form', component: PropertyDetailsFormComponent, canActivate: [AuthGuard] },
 
         ],
        }

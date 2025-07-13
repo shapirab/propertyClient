@@ -14,6 +14,7 @@ export class PricingFormComponent implements OnInit {
   securityDeposit: number;
   maintenance: number;
   sellingAskingPrice: number;
+
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
