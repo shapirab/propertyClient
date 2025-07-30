@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-property',
@@ -8,13 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListPropertyComponent implements OnInit {
   selectedIndex = 0;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
     ngOnInit(): void {
-      this.router.navigateByUrl('/home/list-property/basic-info');
-      this.activatedRoute.url.subscribe(() => {
-      this.updateSelectedTab();
-    });
+      this.activatedRoute.url.subscribe((segments) => {
+        this.updateSelectedTab();
+      });
     }
 
     updateSelectedTab() {
@@ -25,7 +24,7 @@ export class ListPropertyComponent implements OnInit {
     else if (url.includes('address')) {
       this.selectedIndex = 2;
     }
-    else if (url.includes('other-details')) {
+    else if (url.includes('details-form')) {
       this.selectedIndex = 3;
     }
     else if (url.includes('photos')) {

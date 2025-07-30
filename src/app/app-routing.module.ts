@@ -24,6 +24,7 @@ const routes: Routes = [
       { path: 'buy', component: BuyComponent },
       { path: 'list-property', component: ListPropertyComponent,
         children: [
+          { path: '', redirectTo: 'basic-info', pathMatch: 'full' },
           { path: 'basic-info', component: BasicInfoComponent },
           { path: 'pricing', component: PricingFormComponent},
           { path: 'address-form', component: PropertyAddressFormComponent},
